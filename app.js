@@ -46,6 +46,6 @@ app.get('/company',function(req, res) {
   res.sendFile(path.join(__dirname+'/public/company.html'));
 })
  
-app.listen(3000, '0.0.0.0', function() {
-  console.log('Listening to port:  ' + 3000);
+app.listen(process.env.PORT || 3000, function() {
+  console.log("listening on 3000");
 });
